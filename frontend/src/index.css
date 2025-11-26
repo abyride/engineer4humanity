@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@theme {
+  /* --- Colors --- */
+--color-primary-50:  #fff9e5;
+--color-primary-100: #fff3cc;
+--color-primary-200: #ffe699;
+--color-primary-300: #ffdb66;
+--color-primary-400: #ffce33;
+--color-primary-500: #ffc300; /* base dark yellow */
+--color-primary-600: #e6ac00;
+--color-primary-700: #cc9500;
+--color-primary-800: #b37d00;
+--color-primary-900: #996600;
+--color-primary-950: #4d3300;
+
+
+ 
+  --color-secondary-50: #f0fdfa;
+  --color-secondary-100: #ccfbf5;
+  --color-secondary-200: #99f6e9;
+  --color-secondary-300: #5eead4;
+  --color-secondary-400: #2dd4bf;
+  --color-secondary-500: #14b8a6;
+  --color-secondary-600: #0d9488;
+  --color-secondary-700: #0f766e;
+  --color-secondary-800: #115e59;
+  --color-secondary-900: #134e4a;
+  --color-secondary-950: #062e2c;
+  /* --- Fonts --- */
+ 
+
+  /* --- Animations and Keyframes --- */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-pulse-slow: pulse 3s ease-in-out infinite;
+
+  /* --- Shadows --- */
+  --shadow-glow: 0 0 20px rgba(239, 68, 68, 0.3);
+  --shadow-glow-lg: 0 0 40px rgba(239, 68, 68, 0.4);
+}
+body{
+     font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+   
+    font-style: normal;
+  }
+
+
+  .ql-editor {
+  min-height: 300px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.prose {
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+.ql-toolbar {
+  border-radius: 10px 10px 0 0;
+}
+
+.ql-container {
+  border-radius: 0 0 10px 10px;
+}

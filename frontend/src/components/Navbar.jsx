@@ -24,7 +24,7 @@ function NavBar() {
     
     },
             { name: "About Us", path: "/about-us" },
-            { name: "Get Involved", path: "/get-involved" },
+         
         { name: "Member", path: "/team-member" },
       
    

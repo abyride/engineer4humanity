@@ -90,7 +90,7 @@ function NavBar() {
               </button>
 
               <a
-                href="/contact"
+                href="/contact-us"
                 className="flex items-center space-x-3 px-8 py-3.5 bg-primary-500 hover:bg-primary-400 text-gray-900 font-bold rounded-full transition-all duration-300 shadow-xl hover:shadow-primary-500/50 hover:scale-105 text-sm tracking-wide"
               >
                 <span>Request Proposal</span>
@@ -170,7 +170,7 @@ function NavBar() {
               {/* Mobile CTA */}
               <div className="p-8 space-y-4 bg-gradient-to-t from-black/50 to-transparent">
                 <a
-                  href="/contact"
+                  href="/contact-us"
                   onClick={() => setMenuOpen(false)}
                   className="w-full block text-center px-8 py-5 bg-primary-500 hover:bg-primary-400 text-gray-900 font-bold rounded-full transition-all shadow-xl text-lg"
                 >

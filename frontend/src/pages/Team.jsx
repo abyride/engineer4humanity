@@ -141,13 +141,13 @@ const TeamPage = () => {
   return (
     <div className="w-full min-h-screen bg-white">
       {/* Hero Section */}
-      <Header title="Our Team" path="Team" />
-      {/* Team Grid Section */}
+      <Header title="Our Member" path="Member" />
+      {/* Member Grid Section */}
       <div className="py-20 px-4 md:px-8 bg-gray-50">
         <div className=" mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Global Executive Team
+            Our Global Executive Member
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Meet the founders, alumni, and volunteers — many former refugees themselves — who turn lived experience into lasting impact through compassion, engineering, and education.
@@ -212,19 +212,19 @@ const TeamPage = () => {
           </div>
         </div>
       </div>
-      {/* Join Our Team Section */}
+      {/* Join Our Member Section */}
       <div className="py-20 px-4 md:px-8 bg-white">
         <div className=" mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[500px]">
               <img
                 src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=80"
-                alt="Join E4H Team – Diverse group collaborating on community project"
+                alt="Join E4H Member – Diverse group collaborating on community project"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
               <div className="absolute bottom-8 left-8 text-white">
-                <h3 className="text-3xl font-bold mb-2">Join Our Mission-Driven Team</h3>
+                <h3 className="text-3xl font-bold mb-2">Join Our Mission-Driven Member</h3>
                 <p className="text-lg opacity-90">Empower communities with your skills and heart</p>
               </div>
             </div>
@@ -288,7 +288,7 @@ const TeamPage = () => {
               Donate Today
             </button>
             <button className="px-10 py-5 bg-transparent border-3 border-white text-white hover:bg-white hover:text-gray-900 font-bold rounded-full text-lg transition-all duration-300">
-              Contact Team
+              Contact Member
             </button>
           </div>
         </div>

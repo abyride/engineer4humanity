@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import {
-  HeartHandshake,
-  Lightbulb,
+  Ear,
+  
   UsersRound,
   Wrench,
-  GraduationCap,
+  Handshake,
   ChevronDown,
   Sparkles,
   Globe,
   Award,
-  Shield
+  ShieldCheck,
+  Target,
+  Printer
 } from 'lucide-react';
 
 export default function E4HProcess() {
@@ -17,29 +19,29 @@ export default function E4HProcess() {
 
   const steps = [
     {
-      icon: HeartHandshake,
-      title: 'Listen & Understand',
-      description: 'We begin by listening deeply to the community — refugees, local leaders, and partners — to truly understand their greatest needs, dreams, and long-term vision for self-reliance.',
+      icon: Ear,
+      title: 'Client Needs Assessment',
+      description: 'We start every project with in-depth consultations — understanding technical requirements, site conditions, regulatory frameworks, and your strategic objectives across Africa or the United States.',
       number: '01',
-      gradient: 'from-primary-500 to-amber-600',
+      gradient: 'from-primary-600 to-amber-600',
       bgColor: 'bg-primary-50',
       iconBg: 'bg-primary-100',
       iconColor: 'text-primary-600'
     },
     {
-      icon: Lightbulb,
-      title: 'Co-Design Solutions',
-      description: 'Together with community members and refugee engineers, we design sustainable, culturally appropriate projects using local materials and skills whenever possible.',
+      icon: Printer,
+      title: 'Technical Design & Feasibility',
+      description: 'Our refugee-led team of licensed engineers delivers detailed geotechnical reports, structural designs, ESIA studies, and costed BOQs — fully compliant with local and international standards (IBC, Eurocode, BS, AfDB, World Bank).',
       number: '02',
-      gradient: 'from-blue-600 to-indigo-600',
+      gradient: 'from-blue-600 to-cyan-600',
       bgColor: 'bg-blue-50',
       iconBg: 'bg-blue-100',
       iconColor: 'text-blue-600'
     },
     {
       icon: UsersRound,
-      title: 'Train & Build Capacity',
-      description: 'We train local youth and refugees in engineering, construction, and leadership — ensuring every project builds skills, creates jobs, and leaves lasting knowledge behind.',
+      title: 'Skills Transfer & Team Assembly',
+      description: 'We intentionally recruit and train refugee and underserved youth as site technicians, lab assistants, junior engineers, and inspectors — building local capacity while reducing project costs.',
       number: '03',
       gradient: 'from-emerald-500 to-teal-600',
       bgColor: 'bg-emerald-50',
@@ -48,8 +50,8 @@ export default function E4HProcess() {
     },
     {
       icon: Wrench,
-      title: 'Construct Together',
-      description: 'Community members work side-by-side with our refugee-led teams to build solar systems, clean water points, schools, and clinics — creating ownership from day one.',
+      title: 'Execution & Quality Supervision',
+      description: 'From soil testing and special inspections to full construction supervision, our teams ensure every phase meets the highest technical and ethical standards — on time and within budget.',
       number: '04',
       gradient: 'from-orange-500 to-red-600',
       bgColor: 'bg-orange-50',
@@ -57,9 +59,9 @@ export default function E4HProcess() {
       iconColor: 'text-orange-600'
     },
     {
-      icon: GraduationCap,
-      title: 'Hand Over & Sustain',
-      description: 'We officially hand over the completed project along with full training, tools, and maintenance plans — ensuring communities thrive independently long after we leave.',
+      icon: Handshake,
+      title: 'Handover & Long-Term Partnership',
+      description: 'We deliver comprehensive as-built documentation, training for local maintenance teams, and a 12–24 month defects liability partnership — because real success is measured years after completion.',
       number: '05',
       gradient: 'from-purple-600 to-pink-600',
       bgColor: 'bg-purple-50',
@@ -74,118 +76,66 @@ export default function E4HProcess() {
 
   return (
     <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 py-20 md:py-32 px-4 md:px-8 overflow-hidden">
-      {/* Background Blobs — unchanged */}
       <div className="absolute top-20 right-10 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-orange-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
 
       <div className="relative mx-auto ">
         {/* Header */}
         <div className="mb-16 text-center">
           <div className="inline-flex items-center gap-2 bg-primary-500/10 backdrop-blur-sm px-6 py-3 rounded-full border border-primary-500/20 mb-8 shadow-lg">
-            <Sparkles className="w-4 h-4 text-primary-500" />
-            <span className="text-primary-600 font-semibold text-sm tracking-wider uppercase">
-              Our Community-Centered Process
+            <Sparkles className="w-5 h-5 text-primary-600" />
+            <span className="text-primary-700 font-bold text-sm tracking-wider uppercase">
+              Our Proven 5-Step Delivery Process
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            How We Create{' '}
+            Professional Excellence.
+            <br />
             <span className="relative inline-block">
-              <span className="relative z-10">Lasting Change</span>
-              <svg
-                className="absolute -bottom-2 left-0 w-full"
-                height="20"
-                viewBox="0 0 320 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 15C45 5, 100 8, 160 10C220 12, 275 8, 315 12"
-                  stroke="#FCD34D"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                />
+              <span className="relative z-10">Social Impact Built In.</span>
+              <svg className="absolute -bottom-3 left-0 w-full" height="24" viewBox="0 0 420 24" fill="none">
+                <path d="M10 18C70 6, 160 10, 210 12C260 14, 340 8, 410 14" stroke="#FCD34D" strokeWidth="7" strokeLinecap="round" />
               </svg>
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our refugee-led, participatory 5-step process ensures every project is owned, sustained, and multiplied by the community itself.
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            A refugee-founded consultancy combining rigorous engineering standards with deliberate job creation for displaced and underserved youth — delivering projects that last and lives that rise.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left: Accordion — same stunning animation */}
+          {/* Left: Interactive Accordion */}
           <div className="space-y-4">
             {steps.map((step, index) => {
               const Icon = step.icon;
               const isActive = activeIndex === index;
               return (
-                <div
-                  key={index}
-                  className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${
-                    isActive ? 'shadow-2xl' : 'shadow-md hover:shadow-lg'
-                  }`}
-                >
+                <div key={index} className={`relative rounded-2xl overflow-hidden transition-all duration-500 ${isActive ? 'shadow-2xl' : 'shadow-md hover:shadow-xl'}`}>
                   {isActive && (
                     <div className={`absolute inset-0 bg-gradient-to-r ${step.gradient} p-[2px] rounded-2xl`}>
                       <div className="w-full h-full bg-white rounded-2xl"></div>
                     </div>
                   )}
                   <div className="relative bg-white rounded-2xl">
-                    <button
-                      onClick={() => toggleAccordion(index)}
-                      className="w-full flex items-center gap-4 p-6 text-left transition-all duration-300 hover:bg-gray-50"
-                    >
-                      <div
-                        className={`relative flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center shadow-lg transition-all duration-300 ${
-                          isActive
-                            ? `bg-gradient-to-br ${step.gradient} scale-110`
-                            : `${step.iconBg} scale-100`
-                        }`}
-                      >
-                        <span className={`font-bold text-xl ${isActive ? 'text-white' : step.iconColor}`}>
-                          {step.number}
-                        </span>
-                        {isActive && (
-                          <div className="absolute inset-0 rounded-xl bg-white/30 animate-ping"></div>
-                        )}
+                    <button onClick={() => toggleAccordion(index)} className="w-full flex items-center gap-5 p-6 text-left hover:bg-gray-50 transition-all">
+                      <div className={`relative flex-shrink-0 w-16 h-16 rounded-xl flex items-center justify-center shadow-lg transition-all ${isActive ? `bg-gradient-to-br ${step.gradient} scale-110` : step.iconBg}`}>
+                        <span className={`font-bold text-2xl ${isActive ? 'text-white' : step.iconColor}`}>{step.number}</span>
                       </div>
-                      <div className="flex-1">
-                        <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${
-                          isActive ? 'text-gray-900' : 'text-gray-700'
-                        }`}>
-                          {step.title}
-                        </h3>
+                      <div classNama="flex-1">
+                        <h3 className={`text-2xl font-bold ${isActive ? 'text-gray-900' : 'text-gray-800'}`}>{step.title}</h3>
                       </div>
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        isActive ? `bg-gradient-to-br ${step.gradient}` : 'bg-gray-100'
-                      }`}>
-                        <ChevronDown
-                          className={`w-5 h-5 transition-all duration-300 ${
-                            isActive ? 'rotate-180 text-white' : 'rotate-0 text-gray-500'
-                          }`}
-                        />
-                      </div>
+                      <ChevronDown className={`w-6 h-6 transition-transform ${isActive ? 'rotate-180 text-primary-600' : 'text-gray-500'}`} />
                     </button>
 
-                    <div
-                      className={`transition-all duration-500 overflow-hidden ${
-                        isActive ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                      }`}
-                    >
-                      <div className="px-6 pb-6">
-                        <div
-                          className={`h-[2px] bg-gradient-to-r ${step.gradient} mb-4 rounded-full transform origin-left transition-all duration-700 ${
-                            isActive ? 'scale-x-100' : 'scale-x-0'
-                          }`}
-                        ></div>
-                        <div className={`relative p-5 rounded-xl ${step.bgColor}`}>
-                          <div className="flex items-start gap-3">
-                            <div className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center ${step.iconBg}`}>
-                              <Icon className={`w-5 h-5 ${step.iconColor}`} />
+                    <div className={`transition-all duration-500 overflow-hidden ${isActive ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className="px-6 pb-8">
+                        <div className={`h-1 bg-gradient-to-r ${step.gradient} mb-5 rounded-full`}></div>
+                        <div className={`p-6 rounded-2xl ${step.bgColor} border border-gray-200`}>
+                          <div className="flex gap-4">
+                            <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center ${step.iconBg}`}>
+                              <Icon className={`w-7 h-7 ${step.iconColor}`} />
                             </div>
-                            <p className="text-gray-700 leading-relaxed">
-                              {step.description}
-                            </p>
+                            <p className="text-gray-700 leading-relaxed text-lg">{step.description}</p>
                           </div>
                         </div>
                       </div>
@@ -196,65 +146,57 @@ export default function E4HProcess() {
             })}
           </div>
 
-          {/* Right: Sticky CTA Card — now E4H mission-focused */}
+          {/* Right: Professional CTA Card */}
           <div className="relative lg:sticky lg:top-24">
-            <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
-
+            <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl p-10 md:p-14 shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-primary-600/5"></div>
               <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-500 rounded-2xl mb-6 shadow-lg">
-                  <Globe className="w-9 h-9 text-gray-900" />
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-500 rounded-2xl mb-8 shadow-xl">
+                  <Target className="w-11 h-11 text-gray-900" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Ready to Change Lives Together?
+                <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready for World-Class<br />Engineering with Purpose?
                 </h3>
-                <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-                  Join us in building a world where every refugee and underserved community has access to clean water, education, and opportunity — through engineering and compassion.
+                <p className="text-gray-300 text-lg mb-10 leading-relaxed">
+                  Partner with a refugee-led firm that delivers technical excellence while transforming displaced youth into licensed, employable engineering professionals.
                 </p>
 
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                    <div className="text-3xl font-bold text-white mb-1">48+</div>
-                    <div className="text-gray-400 text-sm">Projects Delivered</div>
+                <div className="grid grid-cols-2 gap-6 mb-10">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <div className="text-4xl font-bold text-white">10+</div>
+                    <div className="text-gray-400">Years in Africa</div>
                   </div>
-                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                    <div className="text-3xl font-bold text-white mb-1">2,800+</div>
-                    <div className="text-gray-400 text-sm">Lives Transformed</div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <div className="text-4xl font-bold text-white">850+</div>
+                    <div className="text-gray-400">Youth Trained & Employed</div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <a
-                    href="#"
-                    className="w-full block px-8 py-4 bg-primary-500 hover:bg-primary-500 text-gray-900 font-bold rounded-full text-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
-                    Donate Now
+                <div className="space-y-5">
+                  <a href="/contact" className="block w-full px-8 py-5 bg-primary-500 hover:bg-amber-400 text-gray-900 font-bold rounded-full text-center transition-all shadow-lg hover:shadow-2xl transform hover:scale-105">
+                    Request a Consultation
                   </a>
-                  <a
-                    href="#"
-                    className="w-full block px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-center border border-white/20 backdrop-blur-sm transition-all"
-                  >
-                    Volunteer With Us
+                  <a href="/services" className="block w-full px-8 py-5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-center border border-white/30 backdrop-blur-sm transition-all">
+                    Download Company480 Profile
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Trust badges */}
-            <div className="mt-6 grid grid-cols-3 gap-4">
+            {/* Trust Badges */}
+            <div className="mt-8 grid grid-cols-3 gap-4">
               {[
-                { icon: Award, label: 'Refugee-Led' },
-                { icon: Shield, label: '501(c)(3)' },
-                { icon: HeartHandshake, label: 'Community First' }
+                { icon: Award, label: 'Refugee-Founded' },
+                { icon: ShieldCheck, label: 'Licensed Engineers' },
+                { icon: Globe, label: 'Africa + USA' }
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <div key={i} className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow text-center">
-                    <div className="inline-flex items-center justify-center w-10 h-10 bg-primary-100 rounded-lg mb-2">
-                      <Icon className="w-5 h-5 text-primary-600" />
+                  <div key={i} className="bg-white rounded-2xl p-5 shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div className="w-12 h-12 mx-auto mb-2 bg-primary-50 rounded-xl flex items-center justify-center">
+                      <Icon className="w-7 h-7 text-primary-600" />
                     </div>
-                    <p className="text-xs font-medium text-gray-700">{item.label}</p>
+                    <p className="text-xs font-bold text-gray-800">{item.label}</p>
                   </div>
                 );
               })}

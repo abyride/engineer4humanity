@@ -4,38 +4,38 @@ import { ArrowRight, Search, Grid3x3, ChevronLeft, ChevronRight, HeartHandshake,
 const BuildGoHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
-    {
-      Icon: HeartHandshake,
-      title: "Serving with",
-      subtitle: "Compassion",
-      badge: "REFUGEE-FOUNDED NONPROFIT",
-      mainText: "Engineers4Humanity",
-      boldText: "(E4H) Initiative",
-      paragraph: "Founded by refugees who rebuilt their own lives through engineering and education, E4H is driven by lived experience and a deep commitment to pay it forward. We don’t just build structures — we rebuild hope, dignity, and futures.",
-      image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1920&q=80"
-    },
-    {
-      Icon: Users,
-      title: "Empowering",
-      subtitle: "Communities",
-      badge: "EDUCATION & ENGINEERING",
-      mainText: "Born to Make a",
-      boldText: "Positive Impact",
-      paragraph: "From solar-powered classrooms in rural East Africa to STEM mentorship for immigrant youth in the U.S., we deliver hands-on education and sustainable engineering solutions that create lasting pathways out of poverty.",
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
-    },
-    {
-      Icon: Globe,
-      title: "Building",
-      subtitle: "Sustainable Futures",
-      badge: "U.S. & EAST AFRICA",
-      mainText: "Opportunity, Dignity,",
-      boldText: "Self-Reliance",
-      paragraph: "Every water system, school, or training center we design is built to last and to be maintained by the community itself. True impact isn’t charity — it’s partnership that leads to independence and pride.",
-      image: "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=1920&q=80"
-    }
-  ];
+const slides = [
+  {
+    Icon: HeartHandshake,
+    title: "Engineering",
+    subtitle: "with Purpose",
+    badge: "REFUGEE-LED SOCIAL ENTERPRISE",
+    mainText: "Engineers4Humanity",
+    boldText: "Consultancy Ltd",
+    paragraph: "Founded by refugee engineers who turned adversity into expertise, we are a professional East African consultancy delivering world-class engineering solutions while creating dignified careers for displaced and underserved youth across Africa and now in the United States.",
+    image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1920&q=80"
+  },
+  {
+    Icon: Users,
+    title: "Transforming Lives",
+    subtitle: "Through Skills & Jobs",
+    badge: "FROM SURVIVAL TO LEADERSHIP",
+    mainText: "We Train. We Employ.",
+    boldText: "We Build Futures.",
+    paragraph: "Through our International Hope Institute and on-the-job training programs, we transform refugees, immigrants, and vulnerable youth into certified engineers, geotechnical specialists, project managers, and construction professionals — ready to lead major infrastructure projects in Africa and America.",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80"
+  },
+  {
+    Icon: Globe,
+    title: "Africa to America",
+    subtitle: "Global Impact Starts Local",
+    badge: "SERVING TWO CONTINENTS",
+    mainText: "Bridging Continents",
+    boldText: "with Excellence",
+    paragraph: "Registered in East Africa with a growing presence in the United States, we deliver high-standard geotechnical, civil, public health, and renewable energy engineering services while creating meaningful employment and transferring skills from global experts to local communities — advancing both Agenda 2063 and the SDGs.",
+    image: "https://images.unsplash.com/photo-1519389951298-1ccd7148e0d5?w=1920&q=80"
+  }
+];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -104,7 +104,7 @@ const BuildGoHero = () => {
             }`}
           >
             {/* Badge */}
-            <div className="mb-6 px-5 py-2 border-2 border-white border-opacity-30 rounded-full text-white text-sm font-medium tracking-wide">
+            <div className="mb-6 px-5 py-2 border-2 max-w-xs border-white border-opacity-30 rounded-full text-white text-sm font-medium tracking-wide">
               {slide.badge}
             </div>
 
@@ -119,22 +119,23 @@ const BuildGoHero = () => {
             </h1>
 
             {/* Unique Paragraph for Each Slide */}
-            <p className="text-lg text-white/90 max-w-4xl mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 max-w-4xl mb-10 leading-relaxed">
               {slide.paragraph}
             </p>
 
+
             {/* Call-to-Action Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <button className="flex items-center gap-3 px-8 py-4 bg-primary-500 text-gray-900 font-semibold rounded-full hover:bg-primary-700 transition text-lg">
-                Donate Now <ArrowRight size={22} />
-              </button>
-              <button className="flex items-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition text-lg">
-                Volunteer With Us <ArrowRight size={22} />
-              </button>
-              <button className="flex items-center gap-3 px-8 py-4 bg-transparent text-white font-semibold rounded-full border border-white/50 hover:bg-white/10 transition text-lg">
-                Learn More
-              </button>
-            </div>
+<div className="flex flex-wrap gap-4">
+  <button className="flex items-center gap-3 px-8 py-4 bg-primary-500 text-gray-900 font-semibold rounded-full hover:bg-primary-700 transition text-lg">
+    Partner With Us <ArrowRight size={22} />
+  </button>
+  <button className="flex items-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition text-lg">
+    Hire Our Talent <ArrowRight size={22} />
+  </button>
+  <button className="flex items-center gap-3 px-8 py-4 bg-transparent text-white font-semibold rounded-full border border-white/50 hover:bg-white/10 transition text-lg">
+    Explore Services
+  </button>
+</div>
           </div>
         ))}
       </div>

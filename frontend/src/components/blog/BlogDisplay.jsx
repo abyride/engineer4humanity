@@ -1,43 +1,12 @@
 import { ArrowRight, Droplets, GraduationCap, HeartHandshake, Users, School, Wrench } from "lucide-react";
-
-const impactStories = [
-  {
-    id: 1,
-    category: "Education & Hope",
-    title: "Hope School – From 1 Classroom to Serving 600+ Refugee Students",
-    description: "What began in 2009 as a single-room school in Gihembe Refugee Camp is now a full secondary school with science labs, computer rooms, and vocational workshops — entirely built and sustained by refugee-led vision.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80",
-    icon: GraduationCap,
-    reverse: false
-  },
-  {
-    id: 2,
-    category: "Clean Water & Dignity",
-    title: "Solar-Powered Water System for 5,000+ Refugees in Mahama Camp",
-    description: "Designed and constructed boreholes, elevated tanks, and a distribution network bringing safe drinking water within 200 meters of every household — dramatically reducing disease and freeing women and girls from hours of water collection.",
-    image: "https://images.unsplash.com/photo-1581093577422-9e9c74ced2bd?w=1200&q=80",
-    icon: Droplets,
-    reverse: true
-  },
-  {
-    id: 3,
-    category: "Vocational Training & Jobs",
-    title: "Refugee Youth Training Center – Tailoring, Plumbing, Electrical & Construction",
-    description: "Built and equipped a community training hub where 300+ young refugees have gained certified skills, started businesses, and now employ others — proving that opportunity creates opportunity.",
-    image: "https://images.unsplash.com/photo-1581092580497-e0e23cbdf1dc?w=1200&q=80",
-    icon: Wrench,
-    reverse: false
-  },
-  {
-    id: 4,
-    category: "Community Healing & Leadership",
-    title: "Youth Peace & Leadership Hub in Gihembe Camp",
-    description: "A safe space we constructed for mentorship circles, mental wellness programs, women’s empowerment workshops, and peacebuilding dialogues — fostering healing, confidence, and the next generation of refugee leaders.",
-    image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1200&q=80",
-    icon: HeartHandshake,
-    reverse: true
+import { posts } from "../../stores/blogsData";
+const impactStories = posts.slice(0,3).map((p)=> (
+   {
+    ...p,
+    description:p.content[0]?.text,
   }
-];
+)) 
+
 
 export default function ImpactStoriesSection() {
   return (
@@ -90,9 +59,9 @@ export default function ImpactStoriesSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute top-6 left-6">
-                    <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center shadow-xl">
+                    {/* <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center shadow-xl">
                       <story.icon className="w-9 h-9 text-gray-900" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

@@ -1,38 +1,47 @@
 import React, { useEffect } from "react";
-import { ChevronLeft, ChevronRight, Award, TrendingUp, HeartHandshake, Users, GraduationCap, Droplets } from "lucide-react";
+import { ChevronLeft, ChevronRight, Building2, Globe, Handshake, Award } from "lucide-react";
 
-// Partner logos - using placeholder images with E4H-inspired names and categories
 const partners = [
-  { 
-    name: "UNHCR", 
-    logo: "https://via.placeholder.com/200x80/0072BC/FFFFFF?text=UNHCR",
-    category: "Humanitarian Aid"
+  {
+    name: "World Bank Group",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2c/World_Bank_Group_logo.svg",
+    category: "Multilateral Finance"
   },
-  { 
-    name: "Government of Rwanda", 
-    logo: "https://via.placeholder.com/200x80/00A651/FFFFFF?text=Rwanda+Gov",
-    category: "Public Sector"
+  {
+    name: "African Development Bank",
+    logo: "https://www.afdb.org/sites/default/files/afdb_logo.png",
+    category: "Regional Development"
   },
-  { 
-    name: "Hope School", 
-    logo: "https://via.placeholder.com/200x80/FBBF24/000000?text=Hope+School",
-    category: "Education"
+  {
+    name: "USAID",
+    logo: "https://www.usaid.gov/sites/default/files/2023-01/usaid-logo.png",
+    category: "U.S. Government"
   },
-  { 
-    name: "Kepler University", 
-    logo: "https://via.placeholder.com/200x80/4A90E2/FFFFFF?text=Kepler+Uni",
-    category: "Higher Education"
+  {
+    name: "Government of Rwanda",
+    logo: "https://www.gov.rw/fileadmin/templates/logo.png",
+    category: "Public Sector Client"
   },
-  { 
-    name: "One Acre Fund", 
-    logo: "https://via.placeholder.com/200x80/00A651/FFFFFF?text=One+Acre+Fund",
-    category: "Development"
+  {
+    name: "UNOPS",
+    logo: "https://www.unops.org/SiteCollectionImages/UNOPS-logo-blue.png",
+    category: "UN Procurement"
   },
-  { 
-    name: "African Leadership University", 
-    logo: "https://via.placeholder.com/200x80/E74C3C/FFFFFF?text=ALU",
-    category: "Leadership Training"
+  {
+    name: "GIZ – German Cooperation",
+    logo: "https://www.giz.de/static/en/images/logo_giz.png",
+    category: "Bilateral Partner"
   },
+  {
+    name: "Kigali International Airport Authority",
+    logo: "https://via.placeholder.com/220x90/003366/FFFFFF?text=Bugesera+Airport",
+    category: "Infrastructure"
+  },
+  {
+    name: "U.S. Embassy Construction Division",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Seal_of_the_United_States_Department_of_State.svg",
+    category: "Federal Contracts – USA"
+  }
 ];
 
 export default function E4HPartners() {
@@ -41,11 +50,9 @@ export default function E4HPartners() {
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % partners.length);
-    }, 4000);
-
+    }, 4500);
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
@@ -68,97 +75,63 @@ export default function E4HPartners() {
   };
 
   return (
-    <section className="py-20 md:py-32 px-4 md:px-8 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      {/* Dynamic Background Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-primary-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-primary-300 rounded-full blur-3xl animate-pulse delay-500"></div>
+    <section className="py-24 md:py-36 px-4 md:px-8 relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      {/* Animated Background Blobs */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-10 left-10 w-96 h-96 bg-primary-600 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-amber-500 rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-primary-400 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      {/* Decorative Grid Pattern */}
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-        backgroundSize: '50px 50px'
-      }}></div>
-
-      <div className=" mx-auto relative z-10">
-        {/* Header Section */}
+      <div className="mx-auto max-w-7xl relative z-10">
+        {/* Header */}
         <div className="text-center mb-20">
-          {/* Badge with Icon */}
-          <div className="inline-flex items-center gap-2 bg-primary-500/10 backdrop-blur-sm px-6 py-3 rounded-full border border-primary-500/20 mb-8 shadow-lg">
-            <HeartHandshake className="w-5 h-5 text-primary-500" />
-            <span className="text-primary-500 font-semibold text-sm tracking-wider uppercase">Collaborators for Impact</span>
+          <div className="inline-flex items-center gap-3 bg-primary-600/20 backdrop-blur-md px-8 py-4 rounded-full border border-primary-500/30 mb-10 shadow-2xl">
+            <Handshake className="w-7 h-7 text-primary-400" />
+            <span className="text-primary-300 font-bold text-sm tracking-wider uppercase">
+              Trusted By Industry Leaders
+            </span>
           </div>
 
-          {/* Title with Highlight Effect */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Our Trusted{' '}
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            Partners in Progress
+            <br />
             <span className="relative inline-block">
-              <span className="relative z-10 text-white">Partners</span>
-             <svg 
-                  className="absolute -bottom-2 left-0 w-full stroke-primary-500" 
-                  viewBox="0 0 300 20" 
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path 
-                    d="M5 15 Q 150 5, 295 15" 
-                    strokeWidth="6" 
-                    fill="none" 
-                    strokeLinecap="round"
-                  />
-                </svg>
+              <span className="relative z-10">Across Continents</span>
+              <svg className="absolute -bottom-4 left-0 w-full" height="32" viewBox="0 0 520 32">
+                <path d="M10 24 Q 260 6, 510 24" stroke="#FBBF24" strokeWidth="10" fill="none" strokeLinecap="round" />
+              </svg>
             </span>
           </h2>
-          
-          {/* Description */}
-          <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Collaborating with humanitarian agencies, governments, educational institutions, and community organizations to empower refugees through education, WASH, and sustainable engineering.
+
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Governments, multilateral banks, UN agencies, and U.S. federal contractors choose Engineers4Humanity 
+            for world-class geotechnical, WASH, and infrastructure engineering — delivered by a refugee-led team 
+            that turns lived experience into technical excellence.
           </p>
         </div>
 
         {/* Partners Carousel */}
-        <div className="relative mb-16">
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-white hover:bg-primary-500 rounded-full flex items-center justify-center transition-all shadow-xl hover:scale-110 group"
-            aria-label="Previous partners"
-          >
-            <ChevronLeft className="w-6 h-6 text-gray-900 transition-colors" />
+        <div className="relative mb-20">
+          <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-16 h-16 bg-white/10 backdrop-blur-md hover:bg-primary-500 rounded-full flex items-center justify-center transition-all shadow-2xl hover:scale-110 group border border-white/20">
+            <ChevronLeft className="w-8 h-8 text-white group-hover:text-gray-900" />
+          </button>
+          <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-16 h-16 bg-white/10 backdrop-blur-md hover:bg-primary-500 rounded-full flex items-center justify-center transition-all shadow-2xl hover:scale-110 group border border-white/20">
+            <ChevronRight className="w-8 h-8 text-white group-hover:text-gray-900" />
           </button>
 
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-white hover:bg-primary-500 rounded-full flex items-center justify-center transition-all shadow-xl hover:scale-110 group"
-            aria-label="Next partners"
-          >
-            <ChevronRight className="w-6 h-6 text-gray-900 transition-colors" />
-          </button>
-
-          {/* Partners Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-20">
-            {getVisiblePartners().map((partner, index) => (
-              <div
-                key={`${partner.name}-${index}`}
-                className="group relative"
-              >
-                {/* Card */}
-                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-primary-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-white/10 h-44 flex flex-col items-center justify-center relative overflow-hidden">
-                  {/* Hover Gradient Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-primary-600/0 group-hover:from-primary-500/10 group-hover:to-primary-600/10 transition-all duration-300"></div>
-                  
-                  {/* Logo */}
-                  <div className="mb-4 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 px-20">
+            {getVisiblePartners().map((partner, i) => (
+              <div key={`${partner.name}-${i}`} className="group">
+                <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-primary-400/50 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:bg-white/10 h-48 flex flex-col items-center justify-center">
+                  <div className="mb-5">
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-h-16 w-auto object-contain opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
+                      className="max-h-20 w-auto object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500"
                     />
                   </div>
-                  
-                  {/* Category Badge */}
-                  <span className="text-xs text-primary-500 font-semibold px-3 py-1.5 bg-primary-500/10 rounded-full border border-primary-500/20 relative z-10">
+                  <span className="text-xs font-bold text-primary-400 bg-primary-500/10 px-4 py-2 rounded-full border border-primary-500/30">
                     {partner.category}
                   </span>
                 </div>
@@ -166,53 +139,44 @@ export default function E4HPartners() {
             ))}
           </div>
 
-          {/* Pagination Dots */}
-          <div className="flex justify-center gap-3 mt-12">
-            {partners.map((_, index) => (
+          {/* Dots */}
+          <div className="flex justify-center gap-4 mt-14">
+            {partners.map((_, i) => (
               <button
-                key={index}
-                onClick={() => {
-                  setCurrentIndex(index);
-                  setIsAutoPlaying(false);
-                }}
-                className={`transition-all duration-300 rounded-full ${
-                  index === currentIndex
-                    ? 'w-10 h-3 bg-primary-500 shadow-lg shadow-primary-500/50'
-                    : 'w-3 h-3 bg-white/30 hover:bg-white/50 hover:scale-125'
-                }`}
-                aria-label={`Go to partner group ${index + 1}`}
+                key={i}
+                onClick={() => { setCurrentIndex(i); setIsAutoPlaying(false); }}
+                className={`transition-all rounded-full ${i === currentIndex ? 'w-14 h-4 bg-primary-500 shadow-lg' : 'w-4 h-4 bg-white/30 hover:bg-white/60'}`}
               />
             ))}
           </div>
         </div>
 
-        {/* Stats Section with Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-24">
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-28">
           {[
-            { value: "20+", label: "Key Partners" },
-            { value: "2,800+", label: "Lives Impacted" },
-            { value: "100%", label: "Community-Led" },
-            { value: "17+", label: "Years of Collaboration" }
-          ].map((stat, index) => (
-            <div 
-              key={index}
-              className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-primary-500/30 transition-all duration-300 hover:scale-105 text-center group"
-            >
-              <div className="text-5xl md:text-6xl font-bold text-white mb-3 group-hover:text-primary-500 transition-colors">
-                {stat.value}
+            { icon: Building2, value: "50+", label: "Contracts Awarded" },
+            { icon: Globe, value: "12+", label: "Countries Active" },
+            { icon: Award, value: "100%", label: "On-Time Delivery" },
+            { icon: Handshake, value: "15+", label: "Repeat Clients" }
+          ].map((stat, i) => {
+            const Icon = stat.icon;
+            return (
+              <div key={i} className="text-center group">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-500/10 rounded-2xl mb-5 group-hover:bg-primary-500/20 transition-all">
+                  <Icon className="w-10 h-10 text-primary-400" />
+                </div>
+                <div className="text-5xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400 font-medium">{stat.label}</div>
               </div>
-              <div className="text-gray-400 text-sm md:text-base font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-20">
-          <button className="px-10 py-4 bg-primary-500 hover:bg-primary-500 text-gray-900 rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-primary-500/50 hover:scale-105 uppercase tracking-wide">
-            Partner With Us
-          </button>
+        {/* CTA */}
+        <div className="text-center mt-24">
+          <a href="/contact" className="inline-block px-12 py-6 bg-primary-500 hover:bg-amber-400 text-gray-900 rounded-full font-bold text-xl transition-all duration-300 shadow-2xl hover:shadow-primary-500/50 hover:scale-105 uppercase tracking-wide">
+            Become Our Next Partner
+          </a>
         </div>
       </div>
     </section>

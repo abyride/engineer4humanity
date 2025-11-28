@@ -1,44 +1,56 @@
 import React from 'react';
 import {
-  GraduationCap,
-  HeartHandshake,
-  Droplets,
-  Wrench,
+  Building2,
+  TestTube2,
+  HardHat,
+  Globe,
   UsersRound,
-  Lightbulb
+  Lightbulb,
+  FileSearch,
+  Wrench,
 } from 'lucide-react';
 
 export default function ServicesSection() {
   const services = [
     {
-      icon: GraduationCap,
-      title: 'Education & Skills Development',
-      description: 'Scholarships, STEM training, vocational programs in plumbing, electrical, construction, and digital skills — empowering refugee and underserved youth with employable skills and bright futures.',
+      icon: Building2,
+      title: 'Geotechnical & Civil Engineering',
+      description: 'Site investigations, soil testing, foundation design, slope stability analysis, and full geotechnical reporting for infrastructure, mining, and urban development projects across Africa and the U.S.',
     },
     {
-      icon: HeartHandshake,
-      title: 'Youth Empowerment & Leadership',
-      description: 'Mentorship, leadership workshops, mental wellness support, peacebuilding, and women/girls empowerment programs that build confidence, resilience, and community leaders.',
+      icon: TestTube2,
+      title: 'Construction Material Testing & Special Inspection',
+      description: 'Certified laboratory and field testing of concrete, asphalt, soil, and steel. Independent special inspections compliant with IBC, ASTM, and local building codes.',
     },
     {
-      icon: Droplets,
-      title: 'Public-Health Engineering (WASH)',
-      description: 'Clean water systems, sanitation facilities, hygiene promotion, and disease-prevention initiatives that protect health and dignity in refugee camps and vulnerable communities.',
+      icon: HardHat,
+      title: 'Public Health & WASH Engineering',
+      description: 'Design and supervision of water supply systems, sanitation facilities, wastewater management, and hygiene infrastructure — combining technical excellence with community-led sustainability.',
     },
     {
       icon: Wrench,
-      title: 'Engineering & Design',
-      description: 'Professional structural design, architectural planning, water systems engineering, and sustainable infrastructure solutions tailored for humanitarian and community impact.',
+      title: 'Project Management & Supervision',
+      description: 'End-to-end project oversight, cost control, scheduling, quality assurance, and FIDIC-compliant contract administration for government, NGO, and private-sector clients.',
+    },
+    {
+      icon: FileSearch,
+      title: 'Environmental & Social Impact Studies',
+      description: 'ESIA, environmental audits, resettlement action plans, stakeholder engagement, and social safeguarding services aligned with IFC Performance Standards and African Development Bank requirements.',
     },
     {
       icon: Lightbulb,
-      title: 'Construction & Supervision',
-      description: 'Expert construction management, quality control, geotechnical investigations, and community-led building projects — from schools and clinics to water points and housing.',
+      title: 'Renewable Energy & Sustainable Design',
+      description: 'Solar PV systems, mini-grids, energy-efficient buildings, and climate-resilient infrastructure design that reduce costs and environmental impact while creating local green jobs.',
     },
     {
       icon: UsersRound,
-      title: 'Consultancy & Project Management',
-      description: 'Technical advisory, feasibility studies, monitoring & evaluation, and full project oversight for NGOs, governments, and partners seeking ethical, high-standard engineering services.',
+      title: 'Skills Transfer & Workforce Development',
+      description: 'We intentionally train and employ refugee and underserved youth as certified technicians, inspectors, and junior engineers — building Africa’s and America’s next generation of engineering talent.',
+    },
+    {
+      icon: Globe,
+      title: 'Real Estate & Land Development Advisory',
+      description: 'Feasibility studies, property valuation, master planning, and investment advisory services that unlock value while ensuring inclusive, sustainable urban and rural development.',
     },
   ];
 
@@ -49,35 +61,29 @@ export default function ServicesSection() {
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
             <span className="px-6 py-2 border-2 border-gray-300 rounded-full text-sm font-medium text-gray-700 uppercase tracking-wide">
-              Our Programs & Services
+              Professional Services • Social Impact
             </span>
           </div>
-          <h2 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4">
-            Transforming Lives Through<br />
+          <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            World-Class Engineering
+            <br />
             <span className="relative inline-block">
-              <span className="relative z-10">Humanity & Engineering</span>
+              <span className="relative z-10">Delivered with Purpose</span>
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 height="24"
-                viewBox="0 0 320 24"
+                viewBox="0 0 380 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <ellipse
-                  cx="160"
-                  cy="12"
-                  rx="155"
-                  ry="10"
-                  stroke="#FBBF24"
-                  strokeWidth="4"
-                  fill="none"
-                />
+                <ellipse cx="190" cy="12" rx="185" ry="10" stroke="#FBBF24" strokeWidth="5" fill="none" />
               </svg>
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
-            We combine refugee-led compassion with professional engineering excellence to deliver education, 
-            clean water, youth empowerment, and sustainable infrastructure — creating dignity and opportunity that lasts.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto mt-8 leading-relaxed">
+            A refugee-founded East African consultancy bringing proven technical expertise to construction, 
+            infrastructure, and renewable energy projects — while deliberately creating dignified, skilled 
+            careers for displaced and underserved youth in Africa and the United States.
           </p>
         </div>
 
@@ -88,12 +94,12 @@ export default function ServicesSection() {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer border border-gray-100"
+                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-300 group cursor-pointer border border-gray-100 hover:border-primary-200"
               >
-                <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-50 transition-colors">
-                  <Icon className="w-8 h-8 text-gray-700 group-hover:text-primary-600 transition-colors" strokeWidth={1.8} />
+                <div className="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-100 transition-colors">
+                  <Icon className="w-9 h-9 text-primary-600" strokeWidth={1.8} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -104,13 +110,19 @@ export default function ServicesSection() {
           })}
         </div>
 
-        {/* CTA Button */}
-        <div className="text-center">
+        {/* CTA Buttons */}
+        <div className="text-center space-x-6">
           <a
-            href="/get-involved"
-            className="inline-block bg-primary-500 text-gray-900 px-10 py-4 rounded-full font-semibold text-lg hover:bg-primary-500 transition-all shadow-lg hover:shadow-xl uppercase tracking-wide"
+            href="/services"
+            className="inline-block bg-primary-500 text-gray-900 px-10 py-5 rounded-full font-semibold text-lg hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl uppercase tracking-wide"
           >
-            Get Involved Today
+            Explore All Services
+          </a>
+          <a
+            href="/contact"
+            className="inline-block border-2 border-gray-800 text-gray-800 px-10 py-5 rounded-full font-semibold text-lg hover:bg-gray-900 hover:text-white transition-all uppercase tracking-wide"
+          >
+            Request a Proposal
           </a>
         </div>
       </div>

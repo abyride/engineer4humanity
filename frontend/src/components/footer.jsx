@@ -17,10 +17,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: 'About Us', href: '/about' },
+    { label: 'About Us', href: '/about-us' },
     { label: 'Our Services', href: '/services' },
     { label: 'Blogs', href: '/blogs' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Contact', href: '/contact-us' },
   ];
 
   const resources = [

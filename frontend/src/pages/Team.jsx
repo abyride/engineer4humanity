@@ -144,6 +144,9 @@ const TeamPage = () => {
       <Header title="Our Member" path="Member" />
       {/* Member Grid Section */}
       <div className="py-20 px-4 md:px-8 bg-gray-50">
+
+
+        
         <div className=" mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
